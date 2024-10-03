@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useAccount } from 'wagmi';
 import {
   AlertDialog,
@@ -13,7 +13,6 @@ import { Loader2, ScanFace, UserRoundCheck } from 'lucide-react';
 import { ZkMeWidget } from '@zkmelabs/widget';
 import { Card, CardDescription, CardHeader, CardTitle } from '../ui/card';
 import { DialogDescription } from '../ui/dialog';
-import { VerificationCardSkeleton } from '../VerificationCardSkeleton';
 import { mintGlobalVoterIdZkMe } from '@/lib/actions';
 
 interface VerificationStepProps {
@@ -22,7 +21,6 @@ interface VerificationStepProps {
   verificationData: {
     isZkMeVerified: boolean;
     setIsZkMeVerified: (isZkMeVerified: boolean) => void;
-    isLoading: boolean;
     balanceData: {
       decimals: number;
       formatted: string;
@@ -44,8 +42,7 @@ export const VerificationStep: React.FC<VerificationStepProps> = ({
   onVerificationChange
 }: VerificationStepProps) => {
   const { address } = useAccount();
-  const { isZkMeVerified, setIsZkMeVerified, isLoading, balanceData } =
-    verificationData;
+  const { isZkMeVerified, setIsZkMeVerified, balanceData } = verificationData;
 
   const [showMintDialog, setShowMintDialog] = useState(false);
   const [mintDialogContent, setMintDialogContent] = useState({
@@ -107,44 +104,32 @@ export const VerificationStep: React.FC<VerificationStepProps> = ({
         Create your Global Voter ID by verifying your identity through facial
         scanning.
       </DialogDescription>
-
-      {isLoading ? (
-        <>
-          <VerificationCardSkeleton />
-        </>
-      ) : (
-        <>
-          {/* ZkMe Verification Card */}
-          <Card
-            onClick={handleLaunchWidget}
-            className={`flex cursor-pointer flex-col justify-between ${isZkMeVerified ? 'bg-muted' : ''}`}
-          >
-            <CardHeader className="flex flex-row justify-between space-y-0 pb-4">
-              <CardTitle
-                className={isZkMeVerified ? 'text-muted-foreground' : ''}
-              >
-                {isZkMeVerified ? 'Voter ID created' : 'Verify your uniqueness'}
-              </CardTitle>
-              {isZkMeVerified ? (
-                <UserRoundCheck
-                  className="size-[18px] text-muted-foreground"
-                  strokeWidth={1}
-                />
-              ) : (
-                <ScanFace
-                  className="size-[18px] text-muted-foreground"
-                  strokeWidth={1}
-                />
-              )}
-            </CardHeader>
-            <CardDescription className="px-6 pb-6 leading-relaxed">
-              {isZkMeVerified
-                ? 'You already completed the face verification process.'
-                : 'Prove your personhood through a fully encrypted face verification process.'}
-            </CardDescription>
-          </Card>
-        </>
-      )}
+      <Card
+        onClick={handleLaunchWidget}
+        className={`flex cursor-pointer flex-col justify-between ${isZkMeVerified ? 'bg-muted' : ''}`}
+      >
+        <CardHeader className="flex flex-row justify-between space-y-0 pb-4">
+          <CardTitle className={isZkMeVerified ? 'text-muted-foreground' : ''}>
+            {isZkMeVerified ? 'Voter ID created' : 'Verify your uniqueness'}
+          </CardTitle>
+          {isZkMeVerified ? (
+            <UserRoundCheck
+              className="size-[18px] text-muted-foreground"
+              strokeWidth={1}
+            />
+          ) : (
+            <ScanFace
+              className="size-[18px] text-muted-foreground"
+              strokeWidth={1}
+            />
+          )}
+        </CardHeader>
+        <CardDescription className="px-6 pb-6 leading-relaxed">
+          {isZkMeVerified
+            ? 'You already completed the face verification process.'
+            : 'Prove your personhood through a fully encrypted face verification process.'}
+        </CardDescription>
+      </Card>
 
       <AlertDialog open={showMintDialog} onOpenChange={setShowMintDialog}>
         <AlertDialogContent>

@@ -4,7 +4,6 @@ import { usePathname } from 'next/navigation';
 import {
   Book,
   Landmark,
-  UserRoundCheck,
   UserRoundPlus,
   UsersRound
 } from 'lucide-react';

@@ -24,8 +24,7 @@ import {
   HandCoins,
   IdCard,
   Loader2,
-  ScanFace,
-  UserRoundCheck
+  ScanFace
 } from 'lucide-react';
 import { DEMO_STREAM_LINK, STREAM_LINK_TEMPLATE } from '@/lib/links';
 import { ZkMeWidget } from '@zkmelabs/widget';

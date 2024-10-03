@@ -220,7 +220,6 @@ const GetStartedButton = () => {
                 verificationData={{
                   isZkMeVerified,
                   setIsZkMeVerified,
-                  isLoading,
                   balanceData: balanceData ?? {
                     decimals: 0,
                     formatted: '0',
