@@ -331,7 +331,7 @@ const GetStartedPage: React.FC = () => {
             </Card>
 
             <FeatureCard
-              title="Demo stream"
+              title="View demo stream"
               description="Never heard of money streaming? Check out a demo before setting
                 up your own."
               icon={
@@ -340,7 +340,7 @@ const GetStartedPage: React.FC = () => {
                   strokeWidth={1}
                 />
               }
-              buttonText="View demo stream"
+              buttonText="Demo stream"
               buttonLink={DEMO_STREAM_LINK}
             />
           </>
