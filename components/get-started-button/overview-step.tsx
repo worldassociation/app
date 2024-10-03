@@ -5,7 +5,7 @@ export const OverviewStep = () => {
     {
       title: 'Get a voter ID',
       description:
-        'Create your voter ID by verifying your identity through facial scanning.'
+        'Create your Global Voter ID by verifying your identity through facial scanning.'
     },
     {
       title: 'Set up basic income',

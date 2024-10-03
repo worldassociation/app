@@ -39,7 +39,7 @@ const CommunityPage: React.FC = () => {
           />
           <FeatureCard
             title="Guild"
-            description="Get access to special Discord roles, private Telegram groups, and more."
+            description="Get access to special Discord roles, human-only Telegram groups, and more."
             icon={
               <Castle
                 className="size-[18px] text-muted-foreground"

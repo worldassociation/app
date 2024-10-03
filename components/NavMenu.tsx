@@ -63,7 +63,7 @@ export default function NavMenu() {
                 updates.
               </ListItem>
               <ListItem title="Guild" href={GUILD_LINK} isExternal>
-                Get access to special Discord roles, private Telegram groups,
+                Get access to special Discord roles, human-only Telegram groups,
                 and more.
               </ListItem>
               <ListItem title="Telegram" href={TELEGRAM_LINK} isExternal>
