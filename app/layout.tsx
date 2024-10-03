@@ -8,10 +8,10 @@ import '@zkmelabs/widget/dist/style.css';
 
 export const metadata = {
   title: 'World Association',
-  description: 'Democratizing global governance.',
+  description: 'The organization of global democracy.',
   openGraph: {
     title: 'World Association',
-    description: 'Democratizing global governance.'
+    description: 'The organization of global democracy.'
   }
 };
 

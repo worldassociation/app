@@ -1,15 +1,15 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import { HandCoins, IdCard, Landmark, UsersRound } from 'lucide-react';
+import { Book, IdCard, Landmark, UsersRound } from 'lucide-react';
 import Link from 'next/link';
 import { clsx } from 'clsx';
 
 const links = [
-  { href: '/voter-id', Icon: IdCard, label: 'Voter ID' },
-  { href: '/basic-income', Icon: HandCoins, label: 'Basic income' },
+  { href: '/get-started', Icon: IdCard, label: 'Get started' },
   { href: '/community', Icon: UsersRound, label: 'Community' },
-  { href: '/governance', Icon: Landmark, label: 'Governance' }
+  { href: '/governance', Icon: Landmark, label: 'Governance' },
+  { href: '/learn-more', Icon: Book, label: 'Learn more' }
 ];
 
 const BottomNav: React.FC = () => {

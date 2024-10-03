@@ -104,7 +104,7 @@ export const VerificationStep: React.FC<VerificationStepProps> = ({
   return (
     <>
       <DialogDescription>
-        Create your Global Voter ID after verifying your identity through facial
+        Create your Global Voter ID by verifying your identity through facial
         scanning.
       </DialogDescription>
 

@@ -7,7 +7,7 @@ export default function Hero() {
         World Association
       </h1>
       <CardDescription className="mx-auto py-6 text-center text-[15px]">
-        Democratizing global governance.
+        The organization of global democracy.
       </CardDescription>
     </>
   );

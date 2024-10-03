@@ -20,7 +20,7 @@ export default function NavMenu() {
     <NavigationMenu className="block max-md:hidden">
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Services</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Get started</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
@@ -34,11 +34,14 @@ export default function NavMenu() {
                       World Association
                     </div>
                     <p className="text-[13px] leading-tight text-muted-foreground">
-                      Democratizing global governance.
+                      The organization of global democracy.
                     </p>
                   </a>
                 </NavigationMenuLink>
               </li>
+              <ListItem href="/get-started" title="Overview">
+                Explore our core services.
+              </ListItem>
               <ListItem href="/voter-id" title="Global Voter ID">
                 Participate in global democracy.
               </ListItem>

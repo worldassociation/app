@@ -1,7 +1,5 @@
 import { GITHUB_LINK } from '@/lib/links';
 
-const docLinks = [{ href: GITHUB_LINK, title: 'GitHub' }];
-
 export default function Footer() {
   return (
     <section className="hidden w-full flex-row justify-between gap-2 px-4 py-3 md:flex">
@@ -20,7 +18,7 @@ export default function Footer() {
         </p>
       </aside>
       <a
-        href="https://github.com/worldassociation"
+        href={GITHUB_LINK}
         target="_blank"
         rel="noreferrer"
         className="text-[13px] font-medium leading-5 text-muted-foreground"

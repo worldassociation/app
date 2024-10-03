@@ -14,7 +14,7 @@ export const AccessStep = () => {
       <a href={GUILD_LINK} target="_blank" rel="noopener noreferrer">
         <Card className="flex flex-col justify-between">
           <CardHeader className="flex flex-row justify-between space-y-0 pb-4">
-            <CardTitle>Visit our Guild</CardTitle>
+            <CardTitle>Explore our Guild</CardTitle>
             <Castle
               className="size-[18px] text-muted-foreground"
               strokeWidth={1}

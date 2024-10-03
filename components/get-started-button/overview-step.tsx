@@ -5,7 +5,7 @@ export const OverviewStep = () => {
     {
       title: 'Get a voter ID',
       description:
-        'Create your voter ID after verifying your identity through facial scanning.'
+        'Create your voter ID by verifying your identity through facial scanning.'
     },
     {
       title: 'Set up basic income',
@@ -14,7 +14,7 @@ export const OverviewStep = () => {
     },
     {
       title: 'Unlock access',
-      description: 'Gain access to exclusive communities and resources.'
+      description: 'Get access to human-only communities and resources.'
     }
   ];
 
