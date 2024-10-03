@@ -33,7 +33,12 @@ export default function RootLayout({
         <OnchainProviders>
           <RootProvider
             search={{
-              hotKey: [{ key: 'k', display: <></> }]
+              hotKey: [
+                {
+                  key: 'k',
+                  display: <></>
+                }
+              ]
             }}
           >
             {children}

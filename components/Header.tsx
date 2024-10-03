@@ -13,7 +13,14 @@ export default function Header() {
           <div className="box-border size-[30px] rounded-full border-[5px] border-foreground"></div>
         </Link>
         <NavMenu />
+        <Link
+          className="block text-[13px] font-medium md:hidden"
+          href="/learn-more"
+        >
+          Learn more
+        </Link>
       </div>
+
       <div className="flex items-center gap-4">
         <ThemeSwitcher />
         <a

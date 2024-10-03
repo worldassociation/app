@@ -93,6 +93,11 @@ button > span {
   font-size: 13px !important;
 }
 
+/* Remove docs search hotkey border */
+kbd {
+  border: none !important;
+}
+
 .onchainkit-wallet-dropdown-link span,
 .onchainkit-wallet-dropdown-fund-link span,
 .onchainkit-wallet-dropdown-disconnect span {
