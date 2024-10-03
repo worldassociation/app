@@ -32,7 +32,7 @@ export default function LogInButton() {
               <Avatar className="h-7 w-7" />
             </Identity>
           </ConnectWallet>
-          <WalletDropdown className="rounded-md border border-border shadow-md">
+          <WalletDropdown className="rounded-md border border-border bg-background shadow-md">
             <Identity
               className="bg-background px-4 pb-2 pt-3 hover:bg-muted"
               address={address}

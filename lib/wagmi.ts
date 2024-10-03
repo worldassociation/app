@@ -32,7 +32,7 @@ export function useWamigConfig() {
         }
       ],
       {
-        appName: 'Global Voter ID',
+        appName: 'World Association',
         projectId
       }
     );

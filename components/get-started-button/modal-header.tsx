@@ -15,7 +15,7 @@ export const ModalHeader: React.FC<ModalHeaderProps> = ({
       case 1:
         return 'Overview';
       case 2:
-        return 'Get a voter ID';
+        return 'Claim your voter ID';
       case 3:
         return 'Set up basic income';
       case 4:

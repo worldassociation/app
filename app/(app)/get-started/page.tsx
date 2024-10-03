@@ -22,9 +22,9 @@ import {
   ArrowUpRight,
   ExternalLink,
   HandCoins,
-  IdCard,
   Loader2,
-  ScanFace
+  ScanFace,
+  UserRoundCheck
 } from 'lucide-react';
 import { DEMO_STREAM_LINK, STREAM_LINK_TEMPLATE } from '@/lib/links';
 import { ZkMeWidget } from '@zkmelabs/widget';
@@ -244,10 +244,10 @@ const GetStartedPage: React.FC = () => {
                 >
                   {balanceData && balanceData.value > BigInt(0)
                     ? 'Voter ID created'
-                    : 'Get a voter ID'}
+                    : 'Claim your voter ID'}
                 </CardTitle>
                 {balanceData && balanceData.value > BigInt(0) ? (
-                  <IdCard
+                  <UserRoundCheck
                     className="size-[18px] text-muted-foreground"
                     strokeWidth={1}
                   />
@@ -269,79 +269,84 @@ const GetStartedPage: React.FC = () => {
                     className="h-10 min-w-0 rounded-full bg-primary px-6 font-medium text-primary-foreground hover:bg-primary/90"
                     text="Sign up to claim"
                   />
-                ) : balanceData && balanceData.value > BigInt(0) ? (
-                  <a
-                    href="https://snapshot.org/#/worldassociation.eth"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Button>See current proposals</Button>
-                  </a>
                 ) : (
-                  <Button onClick={handleLaunchIdWidget}>
-                    Claim your voter ID
-                  </Button>
+                  balanceData &&
+                  balanceData.value === BigInt(0) && (
+                    <Button onClick={handleLaunchIdWidget}>
+                      Claim your voter ID
+                    </Button>
+                  )
                 )}
               </CardFooter>
             </Card>
 
             {/* Basic Income Card */}
-            <Card
-              className={`flex flex-col justify-between ${isBasicIncomeSetUp ? 'bg-muted' : ''}`}
-            >
-              <CardHeader className="flex flex-row justify-between space-y-0 pb-4">
-                <CardTitle
-                  className={isBasicIncomeSetUp ? 'text-muted-foreground' : ''}
+            {isBasicIncomeSetUp ? (
+              <>
+                <a
+                  href={getUserStreamLink()}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  {isBasicIncomeSetUp
-                    ? 'Basic income active'
-                    : 'Set up basic income'}
-                </CardTitle>
-                <HandCoins
-                  className="size-[18px] text-muted-foreground"
-                  strokeWidth={1}
-                />
-              </CardHeader>
-              <CardDescription className="px-6 pb-4 leading-relaxed">
-                {isBasicIncomeSetUp
-                  ? 'Your basic income stream is active. World drachma flows into your account every second.'
-                  : 'Claim your basic income and start receiving our official currency every second.'}
-              </CardDescription>
-              <CardFooter>
-                {!address ? (
-                  <ConnectWallet
-                    className="h-10 min-w-0 rounded-full bg-primary px-6 font-medium text-primary-foreground hover:bg-primary/90"
-                    text="Sign up to claim"
+                  <Card className="flex flex-col justify-between">
+                    <CardHeader className="flex flex-row justify-between space-y-0 pb-4">
+                      <CardTitle>View your basic income stream</CardTitle>
+                      <ExternalLink
+                        className="size-[18px] text-muted-foreground"
+                        strokeWidth={1}
+                      />
+                    </CardHeader>
+                    <CardDescription className="px-6 pb-6 leading-relaxed">
+                      Check out your basic income stream on Superfluid.
+                    </CardDescription>
+                  </Card>
+                </a>
+              </>
+            ) : (
+              <Card className="flex flex-col justify-between">
+                <CardHeader className="flex flex-row justify-between space-y-0 pb-4">
+                  <CardTitle>Set up basic income</CardTitle>
+                  <HandCoins
+                    className="size-[18px] text-muted-foreground"
+                    strokeWidth={1}
                   />
-                ) : isBasicIncomeSetUp ? (
-                  <a
-                    href={getUserStreamLink()}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Button>Check your basic income</Button>
-                  </a>
-                ) : (
-                  <Button onClick={handleLaunchStreamWidget}>
-                    Claim your basic income
-                  </Button>
-                )}
-              </CardFooter>
-            </Card>
+                </CardHeader>
+                <CardDescription className="px-6 pb-4 leading-relaxed">
+                  {isBasicIncomeSetUp
+                    ? 'Your basic income stream is active. World drachma flows into your account every second.'
+                    : 'Claim your basic income and start receiving our official currency every second.'}
+                </CardDescription>
+                <CardFooter>
+                  {!address ? (
+                    <ConnectWallet
+                      className="h-10 min-w-0 rounded-full bg-primary px-6 font-medium text-primary-foreground hover:bg-primary/90"
+                      text="Sign up to claim"
+                    />
+                  ) : (
+                    <Button onClick={handleLaunchStreamWidget}>
+                      Claim your basic income
+                    </Button>
+                  )}
+                </CardFooter>
+              </Card>
+            )}
 
-            <FeatureCard
-              title="View demo stream"
-              description="Never heard of money streaming? Check out a demo before setting
+            {/* Demo Stream Card */}
+            {!isBasicIncomeSetUp && (
+              <FeatureCard
+                title="View demo stream"
+                description="Never heard of money streaming? Check out a demo before setting
                 up your own."
-              icon={
-                <ExternalLink
-                  className="size-[18px] text-muted-foreground"
-                  strokeWidth={1}
-                />
-              }
-              buttonText="Demo stream"
-              buttonLink={DEMO_STREAM_LINK}
-            />
+                icon={
+                  <ExternalLink
+                    className="size-[18px] text-muted-foreground"
+                    strokeWidth={1}
+                  />
+                }
+                buttonText="Demo stream"
+                buttonLink={DEMO_STREAM_LINK}
+              />
+            )}
           </>
         </div>
       </div>

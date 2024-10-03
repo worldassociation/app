@@ -3,7 +3,7 @@ import { DialogDescription } from '../ui/dialog';
 export const OverviewStep = () => {
   const steps = [
     {
-      title: 'Get a voter ID',
+      title: 'Claim your voter ID',
       description:
         'Create your Global Voter ID by verifying your identity through facial scanning.'
     },
