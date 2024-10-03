@@ -259,7 +259,7 @@ const GetStartedPage: React.FC = () => {
                   />
                 )}
               </CardHeader>
-              <CardDescription className="px-6 pb-6 leading-relaxed">
+              <CardDescription className="px-6 pb-4 leading-relaxed">
                 {balanceData && balanceData.value > BigInt(0)
                   ? 'You successfully created your Global Voter ID.'
                   : 'Create your Global Voter ID by verifying your identity through facial scanning.'}
