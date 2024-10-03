@@ -86,8 +86,8 @@ export default function NavMenu() {
               </ListItem>
 
               <ListItem
-                title="Polls"
-                href="https://guild.xyz/worldassociation/polls"
+                title="World Polls"
+                href="https://snapshot.org/#/polls.worldassociation.eth"
                 isExternal
               >
                 Experiment with global democracy by creating and voting in
@@ -95,12 +95,12 @@ export default function NavMenu() {
               </ListItem>
 
               <ListItem
-                title="Petitions"
-                href="https://guild.xyz/worldassociation/petitions"
+                title="World Petitions"
+                href="https://snapshot.org/#/petitions.worldassociation.eth"
                 isExternal
               >
-                Make your voice heard by signing anonymous yet verifiably
-                democratic global petitions.
+                Create and sign anonymous yet verifiably democratic global
+                petitions.
               </ListItem>
             </ul>
           </NavigationMenuContent>

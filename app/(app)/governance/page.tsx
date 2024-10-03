@@ -25,7 +25,7 @@ const GovernancePage: React.FC = () => {
             buttonLink="https://github.com/blaisekonya/constitution/blob/main/constitution.md"
           />
           <FeatureCard
-            title="Polls"
+            title="World Polls"
             description="Experiment with global democracy by creating and voting in global polls."
             icon={
               <Vote
@@ -34,11 +34,11 @@ const GovernancePage: React.FC = () => {
               />
             }
             buttonText="View polls"
-            buttonLink="https://guild.xyz/worldassociation/polls"
+            buttonLink="https://snapshot.org/#/polls.worldassociation.eth"
           />
           <FeatureCard
-            title="Petitions"
-            description="Sign anonymous yet verifiably democratic global petitions."
+            title="World Petitions"
+            description="Create and sign anonymous yet verifiably democratic global petitions."
             icon={
               <ClipboardPenLine
                 className="size-[18px] text-muted-foreground"
@@ -46,7 +46,7 @@ const GovernancePage: React.FC = () => {
               />
             }
             buttonText="View petitions"
-            buttonLink="https://guild.xyz/worldassociation/petitions"
+            buttonLink="https://snapshot.org/#/petitions.worldassociation.eth"
           />
         </div>
       </div>
