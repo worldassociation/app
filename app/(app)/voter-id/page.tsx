@@ -1,4 +1,4 @@
-import ClaimButton from 'components/ClaimButton';
+import VoterIDButton from '@/components/VoterIDButton';
 
 function VoterIDPage() {
   return (
@@ -9,7 +9,7 @@ function VoterIDPage() {
       <p className="mx-auto py-6 text-center text-[15px] text-muted-foreground">
         Participate in global democracy.
       </p>
-      <ClaimButton />
+      <VoterIDButton />
     </div>
   );
 }

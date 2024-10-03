@@ -17,7 +17,7 @@ import {
 import { ArrowUpRight, Loader2 } from 'lucide-react';
 import { ConnectWallet } from '@coinbase/onchainkit/wallet';
 
-const ClaimButton = () => {
+const VoterIDButton = () => {
   const { address } = useAccount();
   const { data: balanceData } = useBalance({
     address: address,
@@ -173,4 +173,4 @@ const ClaimButton = () => {
   );
 };
 
-export default ClaimButton;
+export default VoterIDButton;

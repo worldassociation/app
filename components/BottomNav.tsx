@@ -1,12 +1,18 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import { Book, IdCard, Landmark, UsersRound } from 'lucide-react';
+import {
+  Book,
+  Landmark,
+  UserRoundCheck,
+  UserRoundPlus,
+  UsersRound
+} from 'lucide-react';
 import Link from 'next/link';
 import { clsx } from 'clsx';
 
 const links = [
-  { href: '/get-started', Icon: IdCard, label: 'Get started' },
+  { href: '/get-started', Icon: UserRoundPlus, label: 'Get started' },
   { href: '/community', Icon: UsersRound, label: 'Community' },
   { href: '/governance', Icon: Landmark, label: 'Governance' },
   { href: '/learn-more', Icon: Book, label: 'Learn more' }
