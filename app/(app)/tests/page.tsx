@@ -34,7 +34,7 @@ export default function TestsPage() {
   };
 
   return (
-    <main className="flex min-h-[calc(100dvh-108px)] flex-col items-center p-4 pb-8 md:justify-center">
+    <main className="flex min-h-[calc(100dvh-144px)] flex-col items-center p-4 pb-8 md:justify-center">
       {/* World ID Verification Card */}
       <Card
         className={`flex cursor-pointer flex-col justify-between ${isWorldIDVerified ? 'bg-muted' : ''}`}

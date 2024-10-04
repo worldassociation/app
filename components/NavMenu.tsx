@@ -37,7 +37,7 @@ export default function NavMenu() {
                 </NavigationMenuLink>
               </li>
               <ListItem href="/get-started" title="Overview">
-                Explore our core services.
+                Get started with our core services.
               </ListItem>
               <ListItem href="/voter-id" title="Global Voter ID">
                 Participate in global democracy.
@@ -74,7 +74,7 @@ export default function NavMenu() {
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
               <ListItem title="Overview" href="/governance">
-                Learn more about our decision-making processes.
+                Explore our democratic decision-making processes.
               </ListItem>
 
               <ListItem

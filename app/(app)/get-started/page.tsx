@@ -219,7 +219,7 @@ const GetStartedPage: React.FC = () => {
   };
 
   return (
-    <main className="flex min-h-[calc(100dvh-124px)] flex-col items-center p-4 pb-8 md:min-h-[calc(100dvh-108px)] md:justify-center">
+    <main className="flex min-h-[calc(100dvh-160px)] flex-col items-center p-4 pb-8 md:min-h-[calc(100dvh-144px)] md:justify-center">
       <div className="flex max-w-5xl flex-col gap-6 max-md:max-w-md">
         <div>
           <h2 className="text-xl font-bold md:text-2xl">Get started</h2>
@@ -258,7 +258,7 @@ const GetStartedPage: React.FC = () => {
                   />
                 )}
               </CardHeader>
-              <CardDescription className="px-6 pb-4 leading-relaxed">
+              <CardDescription className="px-6 leading-relaxed">
                 {balanceData && balanceData.value > BigInt(0)
                   ? 'You successfully created your Global Voter ID.'
                   : 'Create your Global Voter ID by verifying your identity through facial scanning.'}
@@ -266,13 +266,13 @@ const GetStartedPage: React.FC = () => {
               <CardFooter>
                 {!address ? (
                   <ConnectWallet
-                    className="h-10 min-w-0 rounded-full bg-primary px-6 font-medium text-primary-foreground hover:bg-primary/90"
+                    className="mt-4 h-10 min-w-0 rounded-full bg-primary px-6 font-medium text-primary-foreground hover:bg-primary/90"
                     text="Sign up to claim"
                   />
                 ) : (
                   balanceData &&
                   balanceData.value === BigInt(0) && (
-                    <Button onClick={handleLaunchIdWidget}>
+                    <Button className="mt-4" onClick={handleLaunchIdWidget}>
                       Claim your voter ID
                     </Button>
                   )

@@ -14,6 +14,8 @@ interface FeatureCardProps {
   icon: ReactNode;
   buttonText: string;
   buttonLink: string;
+  outlinedButtonText?: string;
+  outlinedButtonLink?: string;
 }
 
 export function FeatureCard({
@@ -21,7 +23,9 @@ export function FeatureCard({
   description,
   icon,
   buttonText,
-  buttonLink
+  buttonLink,
+  outlinedButtonText,
+  outlinedButtonLink
 }: FeatureCardProps) {
   return (
     <Card className="flex flex-col justify-between">
@@ -32,10 +36,19 @@ export function FeatureCard({
       <CardDescription className="px-6 pb-4 leading-relaxed">
         {description}
       </CardDescription>
-      <CardFooter>
+      <CardFooter className="flex space-x-2">
         <a href={buttonLink} target="_blank" rel="noopener noreferrer">
           <Button>{buttonText}</Button>
         </a>
+        {outlinedButtonText && outlinedButtonLink && (
+          <a
+            href={outlinedButtonLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button variant="outline">{outlinedButtonText}</Button>{' '}
+          </a>
+        )}
       </CardFooter>
     </Card>
   );

@@ -4,7 +4,7 @@ import { MessageCircle, Send, Castle } from 'lucide-react';
 
 const CommunityPage: React.FC = () => {
   return (
-    <main className="flex min-h-[calc(100dvh-108px)] flex-col items-center p-4 pb-8 md:justify-center">
+    <main className="flex min-h-[calc(100dvh-144px)] flex-col items-center p-4 pb-8 md:justify-center">
       <div className="flex max-w-5xl flex-col gap-6 max-md:max-w-md">
         <div>
           <h2 className="text-xl font-bold md:text-2xl">Community</h2>
